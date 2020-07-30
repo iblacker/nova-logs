@@ -1,6 +1,7 @@
 {
     "name": "iblacker/nova-logs",
     "description": "Provides a Log Viewer for Laravel Nova",
+    "homepage": "https://github.com/iblacker/nova-logs-view",
     "keywords": [
         "laravel",
         "nova"
@@ -22,18 +23,18 @@
     },
     "autoload": {
         "psr-4": {
-            "iblacker\\NovaLogViewer\\": "src/"
+            "Iblacker\\NovaLogViewer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "iblacker\\NovaLogViewer\\Tests\\": "tests"
+            "Iblacker\\NovaLogViewer\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "iblacker\\NovaLogViewer\\ToolServiceProvider"
+                "Iblacker\\NovaLogViewer\\ToolServiceProvider"
             ]
         }
     },
