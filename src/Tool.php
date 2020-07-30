@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpJunior\NovaLogViewer;
+namespace Iblacker\NovaLogViewer;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool as BaseTool;

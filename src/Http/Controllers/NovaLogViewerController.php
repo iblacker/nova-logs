@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpJunior\NovaLogViewer\Http\Controllers;
+namespace Iblacker\NovaLogViewer\Http\Controllers;
 
 use Arcanedev\LogViewer\Exceptions\LogNotFoundException;
 use Arcanedev\LogViewer\Tables\StatsTable;

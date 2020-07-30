@@ -1,5 +1,5 @@
 {
-    "name": "php-junior/nova-logs",
+    "name": "iblacker/nova-logs",
     "description": "Provides a Log Viewer for Laravel Nova",
     "keywords": [
         "laravel",
@@ -8,8 +8,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Nyi Nyi Lwin",
-            "email": "nyinyilwin1992@hotmail.com"
+            "name": "Ruihui Yan",
+            "email": "iblacker@me.com"
         }
     ],
     "require": {
@@ -22,18 +22,18 @@
     },
     "autoload": {
         "psr-4": {
-            "PhpJunior\\NovaLogViewer\\": "src/"
+            "iblacker\\NovaLogViewer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PhpJunior\\NovaLogViewer\\Tests\\": "tests"
+            "iblacker\\NovaLogViewer\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "PhpJunior\\NovaLogViewer\\ToolServiceProvider"
+                "iblacker\\NovaLogViewer\\ToolServiceProvider"
             ]
         }
     },

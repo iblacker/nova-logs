@@ -10,7 +10,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="PhpJunior Test Suite">
+        <testsuite name="iblacker Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

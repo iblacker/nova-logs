@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpJunior\NovaLogViewer;
+namespace Iblacker\NovaLogViewer;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use PhpJunior\NovaLogViewer\Http\Middleware\Authorize;
+use Iblacker\NovaLogViewer\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -42,7 +42,7 @@ class ToolServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova', Authorize::class])
-                ->prefix('nova-vendor/php-junior/nova-log-viewer')
+                ->prefix('nova-vendor/iblacker/nova-log-viewer')
                 ->group(__DIR__.'/../routes/api.php');
     }
 

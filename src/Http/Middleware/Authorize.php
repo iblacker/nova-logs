@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpJunior\NovaLogViewer\Http\Middleware;
+namespace Iblacker\NovaLogViewer\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use PhpJunior\NovaLogViewer\Tool;
+use Iblacker\NovaLogViewer\Tool;
 use Symfony\Component\HttpFoundation\Response;
 
 class Authorize
