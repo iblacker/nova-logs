@@ -2,6 +2,7 @@
 
 All notable changes to `nova-log-viewer` will be documented in this file
 
-## 1.0.0 - 2018-09-01
+## 2.0.0 - 2020-07-30
 
-- initial release
+- Initial release
+- Design refresh

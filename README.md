@@ -1,7 +1,14 @@
 # Nova Log Viewer
 
-[![Latest Stable Version](https://poser.pugx.org/php-junior/nova-logs/v/stable)](https://packagist.org/packages/php-junior/nova-logs)
-[![Total Downloads](https://poser.pugx.org/php-junior/nova-logs/downloads)](https://packagist.org/packages/php-junior/nova-logs)
+[![Latest Stable Version](https://poser.pugx.org/iblacker/nova-log-viewer/v/stable)](https://packagist.org/packages/iblacker/nova-log-viewer)
+[![Total Downloads](https://poser.pugx.org/iblacker/nova-log-viewer/downloads)](https://packagist.org/packages/iblacker/nova-log-viewer)
+
+## About
+
+This is a fork of [PHPJunior/nova-logs](https://github.com/PHPJunior/nova-logs), which seems to be abandoned.
+No major changes to the code, mostly updated the design to be consistent with Laravel Nova's design language. I am hoping to maintain this repo and fix any potential bug.
+
+
 
 ![screenshot 1](1.png)
 
@@ -45,6 +52,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
+- [PHPJunior](https://github.com/PHPJunior/nova-logs)
 - [ARCANEDEV](https://github.com/ARCANEDEV/LogViewer)
 
 ## License
