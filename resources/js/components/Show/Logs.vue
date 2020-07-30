@@ -3,28 +3,31 @@
         <heading class="mb-6">Log [ {{ $route.params.date }} ]</heading>
 
         <div class="flex mb-4">
-            <div class="w-1/6">
-                <card class="flex mr-1 rounded-none">
-                    <div class="w-full p-4">
+            <div class="w-1/6 mr-4">
+                <card class="flex mr-1 rounded-lg py-2">
+                    <div class="w-full">
                        <div>
                            <div>
-                               <div class="font-bold text-xl mb-2">Levels</div>
+                               <div class="font-bold text-xl p-4 pt-2 bg-white">Levels</div>
                            </div>
                        </div>
 
                         <ul class="list-reset">
-                            <li class="leading-wide text-sm" v-for="(menu, key) in menus" :key="key">
+                            <li class="leading-wide text-sm " v-for="(menu, key) in menus" :key="key">
                                 <button
                                     :disabled="menu.count === 0"
                                     :style="{ 'background-color' : key !== 'date' ? getColor(menu.count === 0 ? 'empty' : key) : '#1976D2' }"
-                                    class="w-full font-bold py-2 px-4 inline-flex items-center"
+                                    class="w-full py-2 px-4 inline-flex items-center"
                                     @click="$router.push({name: 'nova-log-viewer-show', params: {
                                         date: $route.params.date,
                                         level: key
                                     }})"
                                 >
-                                    <span class="text-white">{{ menu.name }}</span>
-                                    <span class="flex rounded-full text-white uppercase px-2 py-1 text-xs font-bold mr-3">{{ menu.count }}</span>
+                                    <div class="flex justify-between w-full items-center">
+                                        <span class="text-white text-xs uppercase">{{ menu.name }}</span>
+                                        <span class="flex rounded-full text-white px-2 py-1 font-bold">{{ menu.count }}</span>
+                                    </div>
+
                                 </button>
                             </li>
                         </ul>
@@ -32,11 +35,11 @@
                 </card>
             </div>
             <div class="w-5/6">
-                <card class="flex rounded-none" v-if="info != null">
+                <card class="flex" v-if="info != null">
                     <div class="w-full p-4">
                         <div>
                             <div class="float-left">
-                                <div class="font-bold text-xl mb-2">Log info</div>
+                                <div class="font-bold text-xl mb-2">Log Info</div>
                             </div>
 
                             <div class="float-right">
@@ -77,8 +80,12 @@
                     </div>
                 </card>
 
-                <card class="flex rounded-none mt-1 p-2">
-                    <table class="table w-full border-0">
+                <card class="mt-4">
+                    <div class="flex items-center border-b border-50">
+                        <div class="font-bold text-xl p-4">Log Content</div>
+                    </div>
+                    <card class="flex flex-col items-center justify-center">
+                        <table class="table w-full border-0">
                         <thead>
                         <tr>
                             <th>Logs</th>
@@ -94,9 +101,10 @@
                         />
                         </tbody>
                     </table>
+                    </card>
                 </card>
 
-                <card class="flex rounded-none justify-end" v-if="prev != null || next != null">
+                <card class="mt-4 flex rounded-none justify-end" v-if="prev != null || next != null">
                     <div class="inline-flex">
                         <button @click="getLog(prev)" v-if="prev != null" class="bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded-l">
                             Prev
@@ -172,12 +180,12 @@ export default {
     },
     watch: {
         '$route.params.level': function(level) {
-            this.getLog(`/nova-vendor/php-junior/nova-log-viewer/get/${this.$route.params.date}/${level}`)
+            this.getLog(`/nova-vendor/iblacker/nova-log-viewer/get/${this.$route.params.date}/${level}`)
         },
     },
     computed: {
         downloadUrl() {
-            return '/nova-vendor/php-junior/nova-log-viewer/download/';
+            return '/nova-vendor/iblacker/nova-log-viewer/download/';
         },
     },
     mounted() {
@@ -190,7 +198,7 @@ export default {
         getLog(url) {
             url =
                 url ||
-                `/nova-vendor/php-junior/nova-log-viewer/get/${this.$route.params.date}/${
+                `/nova-vendor/iblacker/nova-log-viewer/get/${this.$route.params.date}/${
                     this.$route.params.level
                 }`;
             axios.get(url).then(({ data }) => {
@@ -227,7 +235,7 @@ export default {
         confirmDelete() {
             axios({
                 method: 'delete',
-                url: '/nova-vendor/php-junior/nova-log-viewer/delete',
+                url: '/nova-vendor/iblacker/nova-log-viewer/delete',
                 data: {
                     date: this.deleting.date,
                 },

@@ -1,14 +1,16 @@
 <template>
     <tr>
-        <td class="p-2">
-            <p>
-                <span :style="{'background-color' : getColor(entry.level) }" class="inline-block px-3 py-1 text-sm text-white font-semibold mr-3">
+        <td class="p-4">
+            <p class="mb-4">
+                <span :style="{'background-color' : getColor(entry.level) }" class="rounded-lg inline-block px-3 py-1 text-sm text-white font-semibold mr-3">
                 {{ entry.level.toUpperCase() }}
                 </span>
+                <span class="font-semibold text-sm">
+                    Time : {{ entry.datetime }}
+                </span>
 
-                Time : {{ entry.datetime }}
             </p>
-            <p class="mt-2">
+            <p class="px-4 font-mono text-xs">
                 {{ entry.header }}
             </p>
         </td>

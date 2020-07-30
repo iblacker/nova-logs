@@ -1,13 +1,15 @@
 <template>
-    <div>
-        <heading class="mb-6">Nova Log Viewer</heading>
+    <div class="card">
+        <div class="flex items-center py-3 border-b border-50">
+            <heading class="mb-2 p-4">Nova Log Viewer</heading>
 
+        </div>
         <card class="flex flex-col items-center justify-center">
             <table class="table w-full" cellpadding="0" cellspacing="0">
                 <thead>
                     <tr>
                         <th v-for="(header, key) in headers" :key="key">
-                            <span :style="{ 'background-color' : key !== 'date' ? getColor(key) : '#1976D2' }" class="inline-block p-1  text-sm text-white">
+                            <span :style="{ 'color' : key !== 'date' ? getColor(key) : '#444' }" class="inline-block p-1 text-sm text-white">
                                 {{ header }}
                             </span>
                         </th>
@@ -89,7 +91,7 @@ export default {
             return color(level)
         },
         async getListLogs(url) {
-            url = url || '/nova-vendor/php-junior/nova-log-viewer/get_list_logs';
+            url = url || '/nova-vendor/iblacker/nova-log-viewer/get_list_logs';
             const { data } = await axios.get(url);
             this.headers = data.headers;
             this.rows = data.rows;
@@ -111,7 +113,7 @@ export default {
         confirmDelete() {
             axios({
                 method: 'delete',
-                url: '/nova-vendor/php-junior/nova-log-viewer/delete',
+                url: '/nova-vendor/iblacker/nova-log-viewer/delete',
                 data: {
                     date: this.deleting.date,
                 },

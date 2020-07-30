@@ -4,8 +4,8 @@
             <button :disabled="value === 0" type="button" @click="$router.push({name: 'nova-log-viewer-show', params: {
                 date: date,
                 level: key === 'date' ? 'all' : key
-            }})" :style="{ 'background-color' : key !== 'date' ? getColor(value === 0 ? 'empty' : key) : '#1976D2' }"  class="inline-block p-1 text-sm font-semibold text-white mr-2">
-                {{ value }}
+            }})" :style="{ 'color' : key !== 'date' ? getColor(value === 0 ? 'empty' : key) : '#444' }"  class="inline-block p-1 text-sm font-bold text-white mr-2">
+                {{ value === 0 ? '—' : value }}
             </button>
         </td>
         <td>
@@ -48,7 +48,7 @@
         },
         computed: {
             downloadUrl() {
-                return '/nova-vendor/php-junior/nova-log-viewer/download/'
+                return '/nova-vendor/iblacker/nova-log-viewer/download/'
             },
         },
         methods: {

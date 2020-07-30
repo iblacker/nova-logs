@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['namespace' => 'PhpJunior\NovaLogViewer\Http\Controllers'], function () {
+Route::group(['namespace' => 'Iblacker\NovaLogViewer\Http\Controllers'], function () {
     Route::get('get_chart_data','NovaLogViewerController@getChartData');
     Route::get('get_list_logs','NovaLogViewerController@getListLogs');
     Route::get('download/{date}','NovaLogViewerController@download');
