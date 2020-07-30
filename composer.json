@@ -1,7 +1,7 @@
 {
-    "name": "iblacker/nova-logs",
+    "name": "iblacker/nova-log-viewer",
     "description": "Provides a Log Viewer for Laravel Nova",
-    "homepage": "https://github.com/iblacker/nova-logs-view",
+    "homepage": "https://github.com/iblacker/nova-log-viewer",
     "keywords": [
         "laravel",
         "nova"
