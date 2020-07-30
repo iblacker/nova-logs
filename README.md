@@ -1,7 +1,7 @@
 # Nova Log Viewer
 
-[![Latest Stable Version](https://poser.pugx.org/php-junior/nova-logs/v/stable)](https://packagist.org/packages/php-junior/nova-logs)
-[![Total Downloads](https://poser.pugx.org/php-junior/nova-logs/downloads)](https://packagist.org/packages/php-junior/nova-logs)
+[![Latest Stable Version](https://poser.pugx.org/iblacker/nova-log-viewer/v/stable)](https://packagist.org/packages/iblacker/nova-log-viewer)
+[![Total Downloads](https://poser.pugx.org/iblacker/nova-log-viewer/downloads)](https://packagist.org/packages/iblacker/nova-log-viewer)
 
 ![screenshot 1](1.png)
 
