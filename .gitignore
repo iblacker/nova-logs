@@ -6,4 +6,4 @@ composer.phar
 composer.lock
 phpunit.xml
 mix-manifest.json
-/.idea
+.idea
