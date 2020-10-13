@@ -50,6 +50,16 @@ public function tools()
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
+## Configuration
+
+You can configure the behavior of the log view within a config file. First, just publish the default one:
+
+```
+php artisan vendor:publish --tag=config
+```
+
+Now you can edit the settings in the file `config/log-viewer.php`.
+
 ## Credits
 
 - [PHPJunior](https://github.com/PHPJunior/nova-logs)
