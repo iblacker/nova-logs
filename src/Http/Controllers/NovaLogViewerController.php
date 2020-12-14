@@ -19,7 +19,7 @@ class NovaLogViewerController extends Controller
     private $logViewer;
 
     /** @var int */
-    protected $perPage = 20;
+    protected $perPage;
 
     /**
      * NovaLogViewerController constructor.
@@ -28,6 +28,7 @@ class NovaLogViewerController extends Controller
     public function __construct(LogViewerContract $logViewer)
     {
         $this->logViewer = $logViewer;
+        $this->perPage = config("log-viewer.per-page");
     }
 
     /**
